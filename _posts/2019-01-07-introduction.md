@@ -20,3 +20,11 @@ En este capítulo,
 * Tomarás conciencia del ANSI/ISO Standard C++, C++11, C++14.
 
 <!--more-->
+
+## References
+
+<div id="refs" class="references">
+<div id="ref-agresti2017statistics">
+<p>Agresti, Alan, Christine A Franklin, and Bernhard Klingenberg. 2017. <em>Statistics: The Art and Science of Learning from Data</em>. Pearson Higher Ed.</p>
+</div>
+</div>

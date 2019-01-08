@@ -133,7 +133,10 @@ La población fue el conjunto total de sujetos de interés, a saber, 9.5 millone
 
 El objetivo final de la mayoría de los estudios es aprender sobre la población. por ejemplo, los patrocinadores de esta encuesta de salida querían hacer una inferencia (predicción) sobre todos los votantes, no solo los 3889 votantes muestreados por la encuesta.
 
-Ocasionalmente los datos son disponible desde una población entera. Por ejemplo, cada diez años el 
+Ocasionalmente los datos están disponibles de toda una población. por ejemplo, cada diez años la Oficina del Censo de los EE. UU. recopila datos de toda la población de los EE. UU. (o de casi todos). Pero el censo es una excepción. Por lo general, es demasiado costoso y lento obtener datos de toda una población. Es más práctico obtener datos para una muestra. La encuesta social general y las organizaciones de sondeo, como la encuesta de Gallup, generalmente seleccionan muestras de entre 1000 y 2500 estadounidenses para conocer las opiniones y creencias de la población de todos los estadounidenses. La muestra es válida para encuestas en otras partes del mundo, como el Eurobarómetro en Europa.
+
+
+
 ## References
 
 <div id="refs" class="references">

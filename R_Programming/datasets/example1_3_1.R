@@ -1,0 +1,1 @@
+y <- sample(seq(1,60), size = 12)

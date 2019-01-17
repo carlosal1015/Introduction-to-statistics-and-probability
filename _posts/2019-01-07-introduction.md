@@ -6,8 +6,6 @@ categories: math
 eye_catch: "/Introduction-to-statistics-and-probability/assets/img/probability.jpg"
 ---
 
-![A]({{site.url}}{{site.baseurl}}/assets/img/statistics.jpg)
-
 En este capítulo,
 * Aprenderás sobre los distintos tipos de ordenadores.
 * Explorarás los componentes del software y del hardware de un sistema computacional.

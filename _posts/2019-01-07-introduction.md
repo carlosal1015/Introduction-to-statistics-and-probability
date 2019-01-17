@@ -3,8 +3,10 @@ layout: post
 title: Introduction to statistics and probability
 tags: statistics
 categories: math
-eye_catch: https://www.pearson.com/core1/content/dam/one-dot-com/one-dot-com/netherlands/Higher-Education/The%20art%20and%20Science%20of%20Learning%20from%20data.jpg/_jcr_content/renditions/cq5dam.web.1600.9600.jpeg
+eye_catch: "/Introduction-to-statistics-and-probability/assets/img/probability.jpg"
 ---
+
+![A]({{site.url}}{{site.baseurl}}/assets/img/statistics.jpg)
 
 En este capítulo,
 * Aprenderás sobre los distintos tipos de ordenadores.
@@ -141,18 +143,18 @@ Ocasionalmente los datos están disponibles de toda una población. por ejemplo,
 
 <div id="refs" class="references">
 <div id="ref-agresti2017">
-<p>Agresti, Alan, Christine A Franklin, and Bernhard Klingenberg. 2017. <em>Statistics: The Art and Science of Learning from Data</em>. 4th ed. Pearson Education.</p>
+<p>[1] Agresti, Alan, Christine A Franklin, and Bernhard Klingenberg. 2017. <em>Statistics: The Art and Science of Learning from Data</em>. 4th ed. Pearson Education.</p>
 </div>
 <div id="ref-akritas2016">
-<p>Akritas, Michael G. 2016. <em>Probability &amp; Statistics with R for Engineers and Scientists</em>. 1st ed. Pearson Boston, MA.</p>
+<p>[2] Akritas, Michael G. 2016. <em>Probability &amp; Statistics with R for Engineers and Scientists</em>. 1st ed. Pearson Boston, MA.</p>
 </div>
 <div id="ref-degroot2012">
-<p>DeGroot, Morris H, and Mark J Schervish. 2012. <em>Probability and Statistics</em>. 4th ed. Pearson Education.</p>
+<p>[3] DeGroot, Morris H, and Mark J Schervish. 2012. <em>Probability and Statistics</em>. 4th ed. Pearson Education.</p>
 </div>
 <div id="ref-gould2017">
-<p>Gould, Robert N, Colleen N Ryan, and Rebecca Wong. 2017. <em>Essential Statistics</em>. 2nd ed. Pearson Education.</p>
+<p>[4] Gould, Robert N, Colleen N Ryan, and Rebecca Wong. 2017. <em>Essential Statistics</em>. 2nd ed. Pearson Education.</p>
 </div>
 <div id="ref-walpole2016">
-<p>Walpole, Ronald E, Raymond H Myers, Sharon L Myers, and Keying Ye. 2016. <em>Probability and Statistics for Engineers and Scientists</em>. 9th ed. Pearson Education.</p>
+<p>[5] Walpole, Ronald E, Raymond H Myers, Sharon L Myers, and Keying Ye. 2016. <em>Probability and Statistics for Engineers and Scientists</em>. 9th ed. Pearson Education.</p>
 </div>
 </div>

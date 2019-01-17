@@ -3,12 +3,14 @@ layout: post
 title: Exploring Data with Graphs and Numerical Summaries
 tags: statistics
 categories: math
-eye_catch: https://www.pearson.com/core1/content/dam/one-dot-com/one-dot-com/netherlands/Higher-Education/The%20art%20and%20Science%20of%20Learning%20from%20data.jpg/_jcr_content/renditions/cq5dam.web.1600.9600.jpeg
+eye_catch: "/Introduction-to-statistics-and-probability/assets/img/desktop.jpeg"
 ---
 
 # Explorando datos con gráficos y resúmenes numéricos
 
 La vida no sería interesante si todos se vieran iguales, comieran la misma comida y tuvieran los mismos pensamientos. afortunadamente, la **variabilidad** está en todas partes, y los métodos estadísticos proporcionan formas de medirla y entenderla. Para algunas características de un estudio, a menudo vemos variaciones entre los sujetos. por ejemplo, hay variabilidad entre tus compañeros de clase en peso, mayor, promedio de calificaciones, deporte favorito y afiliación religiosa. Otras características pueden variar tanto por sujeto como a través del tiempo. por ejemplo, la cantidad de tiempo dedicado a estudiar en un día puede variar tanto por estudiante como por día.
+
+<!--more-->
 
 ### Variables
 
@@ -63,20 +65,27 @@ Los cuartiles y el máximo y mínimo valores de cinco números frecuentemente us
 
 ## References
 
+{% highlight r %}
+lv <- read.table("http://media.pearsoncmg.com/cmg/pmmg_mml_shared/mathstatsresources/Akritas/MarketShareLightVeh.txt", header = T)
+attach(lv)
+pie(Percent, labels = Company, col=rainbow(length(Percent)))
+barplot(Percent, names.arg = Company, col = rainbow(length(Percent)), las=2) # fro Figure 1-11
+{% endhighlight %}
+
 <div id="refs" class="references">
 <div id="ref-agresti2017">
-<p>Agresti, Alan, Christine A Franklin, and Bernhard Klingenberg. 2017. <em>Statistics: The Art and Science of Learning from Data</em>. 4th ed. Pearson Education.</p>
+<p>[1] Agresti, Alan, Christine A Franklin, and Bernhard Klingenberg. 2017. <em>Statistics: The Art and Science of Learning from Data</em>. 4th ed. Pearson Education.</p>
 </div>
 <div id="ref-akritas2016">
-<p>Akritas, Michael G. 2016. <em>Probability &amp; Statistics with R for Engineers and Scientists</em>. 1st ed. Pearson Boston, MA.</p>
+<p>[2] Akritas, Michael G. 2016. <em>Probability &amp; Statistics with R for Engineers and Scientists</em>. 1st ed. Pearson Boston, MA.</p>
 </div>
 <div id="ref-degroot2012">
-<p>DeGroot, Morris H, and Mark J Schervish. 2012. <em>Probability and Statistics</em>. 4th ed. Pearson Education.</p>
+<p>[3] DeGroot, Morris H, and Mark J Schervish. 2012. <em>Probability and Statistics</em>. 4th ed. Pearson Education.</p>
 </div>
 <div id="ref-gould2017">
-<p>Gould, Robert N, Colleen N Ryan, and Rebecca Wong. 2017. <em>Essential Statistics</em>. 2nd ed. Pearson Education.</p>
+<p>[4] Gould, Robert N, Colleen N Ryan, and Rebecca Wong. 2017. <em>Essential Statistics</em>. 2nd ed. Pearson Education.</p>
 </div>
 <div id="ref-walpole2016">
-<p>Walpole, Ronald E, Raymond H Myers, Sharon L Myers, and Keying Ye. 2016. <em>Probability and Statistics for Engineers and Scientists</em>. 9th ed. Pearson Education.</p>
+<p>[5] Walpole, Ronald E, Raymond H Myers, Sharon L Myers, and Keying Ye. 2016. <em>Probability and Statistics for Engineers and Scientists</em>. 9th ed. Pearson Education.</p>
 </div>
 </div>

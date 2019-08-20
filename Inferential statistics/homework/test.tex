@@ -1,0 +1,138 @@
+\documentclass[a4paper]{scrreprt}
+\KOMAoptions{BCOR=8.25mm}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{dsfont}
+
+\newtheorem{definition}{Definición}
+\newtheorem{example}{Ejemplo}
+\newtheorem{proposition}{Proposición}
+\title{Estadística inferencial}
+\author{Oromion}
+\date{19 de agosto del 2019}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+	La \emph{estadística inferencial}
+\end{abstract}
+
+\part{Teoría}
+
+\begin{definition}[Estimador]
+	Un estimador es una regla, a menudo expresada como una fórmula, que indica cómo calcular el valor de una estimación con base en las mediciones contenidas en una muestra.
+\end{definition}
+
+\begin{example}[Media muestral]
+	\[ \overline{Y}=\frac{1}{n}\sum_{i=1}^{n}Y_{i}. \]
+\end{example}
+
+\begin{definition}[Estimador insesgado e insesgado]
+	Si $\hat{\theta}$ es un estimador puntual de un parámetro $\theta$, entonces $\hat{\theta}$ es un \emph{estimador insesgado} si $\mathds{E}\left(\hat{\theta}\right)=\theta$. Si $\mathds{E}\left(\hat{\theta}\right)\neq\theta$, se dice que $\hat{\theta}$ está \emph{sesgado}.
+\end{definition}
+
+\begin{definition}[Sesgo]
+	El \emph{sesgo} de un estimador puntual $\hat{\theta}$ está dado por $B\left(\hat{\theta}\right)=\mathds{E}\left(\hat{\theta}\right)-\theta$.
+\end{definition}
+
+\begin{definition}[Error cuadrático medio]
+	El \emph{error cuadrático medio} de un estimador puntual $\hat{\theta}$ es \[ \operatorname{MSE}\left(\hat{\theta}\right)=\mathds{E}\left[{\left(\hat{\theta}-\theta\right)}^{2}\right]. \]
+\end{definition}
+
+\begin{proposition}
+	\[ \operatorname{MSE}\left(\hat{\theta}\right)=V\left(\hat{\theta}\right)+{\left[B\left(\hat{\theta}\right)\right]}^{2}. \]
+\end{proposition}
+\chapter{Ejercicios propuestos del capítulo \emph{Estimación}}
+
+\begin{enumerate}
+\item\label{q:1} Usando la identidad \[ \left(\hat{\theta}-\theta\right)=\left[\hat{\theta}-\mathds{E}\left(\hat{\theta}\right)-\theta\right]=\left[\hat{\theta}-\mathds{E}\left(\hat{\theta}\right)\right]+B\left(\hat{\theta}\right) \] demuestre que \[ \operatorname{MSE}\left(\hat{\theta}\right)=\mathds{E}\left[{\left(\hat{\theta}-\theta\right)}^{2}{2}\right]=V\left(\hat{\theta}\right)+{B\left(\hat{\theta}\right)}^{2}. \]
+
+\item\label{q:2}
+	\begin{enumerate}
+		\item\label{q:2.a} Si $\hat{\theta}$ es un estimador insesgado para $\theta$, ¿cuál es $B\left(\hat{\theta}\right)$?
+		\item\label{q:2.b} Si $B\left(\hat{\theta}\right)=5$, ¿cuál es $\mathds{E}\left(\hat{\theta}\right)$?
+	\end{enumerate}
+	\item\label{q:3} Suponga que $\hat{\theta}$ es un estimador para un parámetro $\theta$ y $\mathds{E}\left(\hat{\theta}\right)=a\theta+b$ para algunas constantes diferentes de cero $a$ y $b$.
+	\begin{enumerate}
+		\item\label{q:3.a} En términos de $a$, $b$ y $\theta$, ¿cuál es $B\left(\hat{\theta}\right)$?
+		\item\label{q:3.b} Encuentre una función de $\hat{\theta}$, por ejemplo $\hat{\theta}^{\ast}$, que es un estimador insesgado para $\theta$.
+	\end{enumerate}
+	\item\label{q:4} Del ejercicio~\eqref{q:1}
+	\begin{enumerate}
+		\item\label{q:4.a} Si $\hat{\theta}$ es un estimador insesgado para $\theta$, ¿cómo se compara $\operatorname{MSE}\left(\hat{\theta}\right)$ con $V\left(\hat{\theta}\right)$?
+		\item\label{q:4.b} Si $\hat{\theta}$ es un estimador insesgado para $\theta$, ¿cómo se compara $\operatorname{MSE}\left(\hat{\theta}\right)$ con $V\left(\hat{\theta}\right)$?
+	\end{enumerate}
+	\item\label{q:5} Del ejercicio~\eqref{q:1}, considere el estimador insesgado $\hat{\theta}^{\ast}$ que usted propuso en el tercer ejercicio.
+	\begin{enumerate}
+		\item\label{q:5.a} Exprese $\operatorname{MSE}\left(\hat{\theta}^{\ast}\right)$ como función de $V\left(\hat{\theta}\right)$.
+		\item\label{q:5.b} Dé un ejemplo de un valor para $a$ para el cual $\operatorname{MSE}\left(\hat{\theta}^{\ast}\right)<\operatorname{MSE}\left(\hat{\theta}\right)$.
+		\item\label{q:5.c} Dé un ejemplo de un valor para $a$ para el cual $\operatorname{MSE}\left(\hat{\theta}^{\ast}\right)>\operatorname{MSE}\left(\hat{\theta}\right)$.
+	\end{enumerate}
+	\item\label{q:6} Suponga que $\mathds{E}\left(\hat{\theta}_{1}\right)=\mathds{E}\left(\hat{\theta}_{2}\right)=\theta$, $V\left(\hat{\theta}_{1}\right)=\sigma^{2}_{1}$ y $V\left(\hat{\theta}_{2}\right)=\sigma^{2}_{2}$. Considere el estimador $\hat{\theta}_{3}=a\hat{\theta}_{1}+\left(1-a\right)\hat{\theta}_{2}$.
+	\begin{enumerate}
+		\item\label{q:6.a} Demuestre que $\hat{\theta}_{3}$ es un estimador insesgado para $\theta$.
+		\item\label{q:6.b} Si $\hat{\theta}_{1}$ y $\hat{\theta}_{2}$ son independientes, ¿cómo debe escogerse la constante $a$ para minimizar la varianza de $\hat{\theta}_{3}$?
+	\end{enumerate}
+\item\label{q:7} Considere la situación descrita en el ejercicio~\eqref{q:6}. ¿Cómo debe elegirse la constante $a$ para minimizar la varianza de $\hat{\theta}_{3}$, si $\hat{\theta}_{1}$ y $\theta_{2}$ no son independientes pero son tales que $\operatorname{Cov}\left(\hat{\theta}_{1},\hat{\theta}_{2}\right)=c\neq0$?
+\item Suponga que $Y_{1}$, $Y_{2}$, $Y_{3}$ denotan una muestra aleatoria de una distribución exponencial con función de densidad \[ f\left(y\right)=\begin{cases}\left(\frac{1}{\theta}e^{-y/\theta}\right),& y>0\\0,&\text{en cualquier otro punto}.\end{cases} \] Considere los siguientes cinco estimadores de $\theta$: \[ \hat{\theta}_{1},\quad\hat{\theta}_{2},\quad\hat{\theta}_{3}=\frac{Y_{1}+2Y_{2}}{3},\quad\theta_{4}=\min\left(Y_{1},Y_{2},Y_{3}\right),\quad\theta_{5}=\overline{Y}. \]
+\begin{enumerate}
+	\item ¿Cuáles de estos estimadores son insesgados?
+	\item Entre los estimadores insesgados, ¿cuál tiene la varianza más pequeña?
+\end{enumerate}
+\item Suponga que $Y_{1},Y_{2},\ldots,Y_{n}$ constituyen una muestra aleatoria de una población con función de densidad de probabilidad \[ f\left(y\right)=\begin{cases}\left(\frac{1}{\theta+1}e^{-y/\left(\theta+1\right)}\right),& y>0,\theta>-1\,\\0,&\text{en cualquier otro punto}.\end{cases} \] Sugiera un estadístico apropiado para usarlo como estimador insesgado para $\theta$.
+\item El número de descomposturas por semana para un tipo de minicomputadora es una variable aleatoria $Y$ con una distribución de Poisson y media $\lambda$. Existe una muestra aleatoria $Y_{1},Y_{2},\ldots,Y_{n}$ de observaciones del número semanal de descomposturas.
+\begin{enumerate}
+	\item Sugiera un estimador insesgado para $\lambda$.
+	\item El costo semanal de reparar estas descomposturas es $C=3Y+Y^{2}$. Demuestre que $E\left(C\right)=4\lambda+\lambda^{2}$.
+	\item Encuentre una función de $Y_{1},Y_{2},\ldots, Y_{n}$ una muestra aleatoria de tamaño $n$ de una población con media $3$. Suponga que $\hat{\theta}_{2}$ es un estimador insesgado para el tercer momento central de la distribución subyacente.
+\end{enumerate}
+\item La lectura en un voltímetro conectado a un circuito de prueba está distribuida uniformemente en el intervalo $\left(\theta,\theta+1\right)$, donde $\theta$ es el valor desconocido del voltaje real del circuito. Suponga que $Y_{1},Y_{2},\ldots,Y_{n}$ denota una muestra aleatoria de esas lecturas.
+\begin{enumerate}
+	\item Demuestre que $\overline{Y}$ es un estimador sesgado de $\theta$ y calcule el sesgo.
+	\item Encuentre una función de $\overline{Y}$ que sea un estimador insesgado de $\theta$.
+	\item Encuentre $\operatornamewithlimits{MSE}\left(\overline{Y}\right)$ cuando $\overline{Y}$ se use como estimador de $\theta$.
+\end{enumerate}
+\item Hemos visto que si $Y$ tiene una distribución binomial con parámetros $n$ y $p$, entonces $Y/n$ es un estimador insesgado de $p$. Para calcular la varianza de $Y$, por lo general usamos $n\left(Y/n\right)\left(1-Y/n\right)$.
+\begin{enumerate}
+	\item Demuestre que el estimador sugerido es un estimador sesgado de $V\left(Y\right)$.
+	\item Modifique ligeramente $n\left(Y/n\right)\left(1-Y/n\right)$ para formar un estimador insesgado de $V\left(Y\right)$.
+\end{enumerate}
+\item Sea $Y_{1},Y_{2}\ldots,Y_{n}$ una muestra aleatoria de tamaño $n$ de una población cuya densidad está dada por \[ f\left(y\right)=\begin{cases}\alpha y^{\alpha-1}/\theta^{\alpha},& 0\leq y\leq\theta,\\0,&\text{en cualquier otro punto},\end{cases} \] donde $\alpha>0$ es un valor fijo conocido, pero $\theta$ no se conoce. Considere el estimador $\hat{\theta}=\max\left(Y_{1},Y_{2},\ldots,Y_{n}\right)$.
+\begin{enumerate}
+	\item Demuestre que $\hat{\theta}$ es un estimador sesgado de $\hat{\theta}$.
+	\item Determine un múltiplo de $\hat{\theta}$ que constituya un estimador de $\hat{\theta}$.
+	\item Deduzca $\operatorname{MSE}\left(\hat{\theta}\right)$.
+\end{enumerate}
+\item Sea $Y_{1},Y_{2},\ldots,Y_{n}$ una muestra aleatoria de tamaño $n$ de una población cuya densidad está dada por \[ f\left(y\right)=\begin{cases}3\beta^{3}y^{-4},& \beta\leq y,\\
+0,&\text{en cualquier otro punto},\end{cases} \] donde $\beta>0$ es desconocido. Considere el estimador $\hat{\beta}=\min\left(Y_{1},Y_{2},\ldots,Y_{n}\right)$.
+\begin{enumerate}
+	\item Deduzca el sesgo del estimador $\hat{\beta}$.
+	\item Deduzca $\operatorname{MSE}\left(\hat{\beta}\right)$.
+\end{enumerate}
+\item Suponga que $Y_{1},Y_{2},\ldots,Y_{n}$ constituyen una muestra aleatoria de una distribución normal con parámetros $\mu$ y $\sigma^{2}$.
+\begin{enumerate}
+	\item Demuestre que $S=\sqrt{S^{2}}$ es un estimador sesgado de $\sigma$.
+	\item Ajuste $S$ para formar un estimador insesgado de $\sigma$.
+	\item Encuentre un estimador insesgado de $\mu-z_{\alpha}\sigma$, el punto que corta un área de cola inferior de $\alpha$ bajo esta curva normal.
+\end{enumerate}
+\item Si $Y$ tiene otra distribución binomial con parámetros $n$ y $p$. entonces $\hat{p}_{1}=Y/n$ es un estimador insesgado de $p$. Otro estimador de $p$ es $\hat{p}_{2}=\left(Y+1\right)/\left(n+2\right)$.
+\begin{enumerate}
+	\item Deduzca el sesgo de $\hat{p}_{2}$.
+	\item Deduzca $\operatorname{MSE}\left(\hat{p}_{1}\right)$ y $\operatorname{MSE}\left(\hat{p}_{2}\right)$.
+	\item ¿Para qué valores de $p$ es $\operatorname{MSE}\left(\hat{p}_{1}\right)<\operatorname{MSE}\left(\hat{p}_{2}\right)$?
+\end{enumerate}
+\item Si $Y_{1},Y_{2},\ldots,Y_{n}$ representan una muestra aleatoria de tamaño $n$ de una población con una distribución uniforme en el intervalo $\left(0,\theta\right)$, considere a $Y_{\left(1\right)}=\min\left(Y_{1},Y_{2},\ldots,Y_{n}\right)$ el estadístico de orden más bajo. Deduzca $\mathds{E}\left(Y_{\left(1\right)}\right)$. Encuentre un múltiplo de $Y_{\left(1\right)}$ que sea un estimador insesgado para $\theta$.
+\item Suponga que $Y_{1},Y_{2},\ldots,Y_{n}$ denotan una muestra aleatoria de tamaño $n$ de una población con una distribución exponencial cuya densidad está dada por \[ f\left(y\right)=\begin{cases}\left(1/\theta\right)e^{-y/\theta},&y>0,\\0,&\text{en cualquier otro punto}.\end{cases} \] Si $Y_{\left(1\right)}=\min\left(Y_{1},Y_{2},\ldots,Y_{n}\right)$ denota el estadístico de orden más bajo, demuestre que $\hat{\theta}=nY_{\left(1\right)}$ es un estimador insesgado para $\theta$ y encuentre $\operatorname{MSE}\left(\hat{\theta}\right)$.
+\item Suponga que $Y_{1},Y_{2},Y_{3},Y_{4}$ denotan una muestra aleatoria de tamaño $4$ de una población con una distribución exponencial cuya densidad está dada por \[ f\left(y\right)=\begin{cases}\left(1/\theta\right)e^{-y/\theta},&y>0,\\0,&\text{en cualquier otro punto}.\end{cases} \]
+\begin{enumerate}
+	\item Sea $X=\sqrt{Y_{1}Y_{2}}$. Encuentre un múltiplo de $X$ que sea un estimador insesgado para $\theta$.
+	\item Sea $W=\sqrt{Y_{1},Y_{2},Y_{3},Y_{4}}$. Encuentre un múltiplo de $W$ que sea un estimador insesgado para $\theta^{2}$.
+\end{enumerate}
+\end{enumerate}
+
+\part{Práctica}
+\chapter{Marco de datos en R}
+\end{document}

@@ -1,0 +1,4 @@
+\contentsline {part}{\numberline {I}Teoría}{4}% 
+\contentsline {chapter}{\numberline {1}Ejercicios propuestos del capítulo \emph {Estimación}}{6}% 
+\contentsline {part}{\numberline {II}Práctica}{10}% 
+\contentsline {chapter}{\numberline {2}Marco de datos en R}{11}% 

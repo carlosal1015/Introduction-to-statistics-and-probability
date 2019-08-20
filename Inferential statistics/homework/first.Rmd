@@ -1,0 +1,35 @@
+---
+title: "Primera tarea"
+output: github_document
+---
+
+#TODO: Crear el archivo en org mode.
+
+# Capítulo 8
+
+Estimaciones
+
+Introducción
+
+Sesgo y error cuadrático medio de estimadores puntuales
+
+Algunos estimadores puntuales insesgados comunes
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Asignación
+
+Leer del capítulo 8, las secciones 8.1, 8.2 y 8.3. Asimismo, resolver los problemas propuestos.
+
+```{r cars}
+summary(cars)
+```
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

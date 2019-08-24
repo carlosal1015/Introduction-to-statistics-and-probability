@@ -1,0 +1,1 @@
+print("Gracias por abrir el script 'my_script.R'")

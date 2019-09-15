@@ -48,4 +48,3 @@ help("bs", try.all.packages = TRUE)       # reports can be found
 ## For programmatic use:
 topic <- "family"; pkg_ref <- "stats"
 help((topic), (pkg_ref))
-

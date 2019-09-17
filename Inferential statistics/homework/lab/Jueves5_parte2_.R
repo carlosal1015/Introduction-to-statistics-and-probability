@@ -3,119 +3,109 @@
 ###############################################################################################
 
 ## Es un arreglo bidimensional que se utiliza para almacenar conjuntos de datos.
-## En este caso las columnas representan variables y las filas las observaciones, a diferencia de una matriz 
-## en este caso las columnas de un data frame pueden ser de distinto tipo. Adem�s es posible asignar nombre 
-## a las columnas y a trav�s de estos se puede acceder a los datos de las columnas. 
+## En este caso las columnas representan variables y las filas las observaciones, a diferencia de una matriz
+## en este caso las columnas de un data frame pueden ser de distinto tipo. Además es posible asignar nombre
+## a las columnas y a través de estos se puede acceder a los datos de las columnas.
 
-setwd("E:/UNI/estadistica_inferencial/data_peru")
+setwd("/home/carlosal1015/Git_Projects/R/Statistics-and-probability/Inferential statistics/homework/lab")
 
-### 1. CREACION DE UN DATA FRAME
+### 1. CREACIÓN DE UN DATA FRAME
 ###############################################################################################
 
-## usaremos los siguientes datos como insumos
+## Usaremos los siguientes datos como insumos.
 
-x=c(1,2,3,4,5)
+x <- c(1, 2, 3, 4, 5)
 
-z=c("A","B","C","D","E")
+z <- c("A", "B", "C", "D", "E")
 
-w=c(FALSE,FALSE,TRUE,TRUE,TRUE)
+w <- c(FALSE, FALSE, TRUE, TRUE, TRUE)
 
-## Podemos crear un data frame utilizando la funcion data.frame()
+## Podemos crear un data frame utilizando la función data.frame()
 
-datos=data.frame(x,z,w)
+datos <- data.frame(x, z, w); datos
 
-datos
-
-## accedemos a la columna w del data frame datos
+## Accedemos a la columna w del data frame datos.
 
 datos$w
 
-## otra forma de acceder a la columna w
+## Otra forma de acceder a la columna w.
 
-datos[,3]
+datos[, 3]
 
-## ubicar las filas donde x es mayor a 2
+## Ubicar las filas donde x es mayor a 2.
 
-datos[datos$x>2,]
+datos[datos$x>2, ]
 
 
 ### 2. DATA FRAMES USANDO LA DATA DE R
 ###############################################################################################
 
-## R ofrecedatos para practicar
+## R ofrece datos para practicar.
 
 
-## mostrar la data que ofrece R
+## Mostrar la data que ofrece R.
 
 data()
 
-## Selecionar y visualizar una de las tantas datas que ofrece R, con la funcion View()
 
-View(esoph) #Smoking, Alcohol and (O)esophageal Cancer
+## Selecionar y visualizar una de las tantas datas que ofrece R, con la función View().
 
-## mostrar el tipo de objeto que representa la data selecionada 
+View(esoph) # Smoking, Alcohol and (O) esophageal Cancer
+
+## Mostrar el tipo de objeto que representa la data selecionada.
 
 class(esoph)
 
-## creando un data frame con la data disponible
+## Creando un data frame con la data disponible.
 
-cancer=data.frame(esoph)
-cancer
+cancer <- data.frame(esoph); cancer
 
 ### 3. LECTURA DE DATOS 
 ###############################################################################################
 
-## Existen diversas funciones para la lectura de un conjunto de datos, una de las m�s sencillas 
-## es read.csv("archivo_a_leer.csv"), el cual lee un archivo en formato csv y crear un objeto de tipo data frame
+## Existen diversas funciones para la lectura de un conjunto de datos, una de las más sencillas
+## es read.csv("archivo_a_leer.csv"), el cual lee un archivo en formato csv y crear un objeto de tipo data frame.
 
 
-## indica la direccion de donde se guardar y leera por defecto la data
+## Indica la dirección dónde se guardará y leerá por defecto la data.
 
-setwd("E:/UNI/estadistica_inferencial/data_peru")
+setwd("/home/carlosal1015/Git_Projects/R/Statistics-and-probability/Inferential statistics/homework/lab")
 
-## lectura de un archivo csv llamado info_peru.csv
+## Lectura de un archivo csv llamado info_peru.csv.
 
-# sep indica en base a que signo va separar los datos
-# header indica si debe colocar las cabeceras 
+# sep indica en base a que signo va separar los datos.
+# header es el parámetro lógico para incluir la cabecera.
 
-peru=read.csv("info_peru.csv", sep = ",", header = TRUE)   
+peru = read.csv("info_peru.csv", sep = ",", header = TRUE, encoding = "UTF-8")
 
-# que objeto es peru
+# ¿Qué objeto es peru?
 
 class(peru)
 
-# visualizar el data frame peru
+# Visualizar el data frame peru.
 View(peru)
 
-### 4.  GUARDAR UN DATA FRAME  DE R EN UN  ARCHIVO DE TIPO CSV
+### 4. GUARDAR UN DATA FRAME DE R EN UN ARCHIVO DE TIPO CSV
 ###############################################################################################
 
-## Debe usar la funcion write.csv()
+## Debe usar la función write.csv()
 
-## guardaremos el data frame creado en el punto 1, llamado datos
+## Guardaremos el data frame creado en el punto 1, llamado datos.
 
-write.table(datos,file = "E:/UNI/estadistica_inferencial/datos.csv", sep = ",", row.names = F)
+write.table(datos, file = "datos.csv", sep = ",", row.names = F)
 
-## otra forma de guardar
+## Otra forma de guardar.
 
-write.csv(datos,file = "E:/UNI/estadistica_inferencial/datos.csv", row.names = F)
+write.csv(datos, file = "datos.csv", row.names = F, fileEncoding = "UTF-8")
 
+## Otra forma de guardar
 
-## otra forma de guardar
+datos <- as.data.frame(cbind(x, z, w)); datos
 
-datos= as.data.frame(cbind(x,z,w)) 
-datos
+datos$x = as.numeric(datos$x) # Declaro qué tipo de objeto es esta columna.
 
-datos$x=as.numeric(datos$x) # declaro que tipo de objeto es esta columna
+datos$z = as.character(datos$z) # Declaro qué tipo de objeto es esta columna.
 
-datos$z=as.character(datos$z) # declaro que tipo de objeto es esta columna
+datos$w = as.logical(datos$w) # Declaro qué tipo de objeto es esta columna.
 
-datos$w=as.logical(datos$w) # declaro que tipo de objeto es esta columna
-
-write.table(datos,file = "E:/UNI/estadistica_inferencial/datos.csv", sep = ",", row.names = F)
-
-
-
-
-
-
+write.table(datos, file = "datos.csv", sep = ",", row.names = F)

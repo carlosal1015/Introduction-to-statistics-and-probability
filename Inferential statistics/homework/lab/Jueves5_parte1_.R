@@ -1,138 +1,130 @@
 ###############################################################################################
-##### Introduccion a R
+##### Introducción a R
 ###############################################################################################
 
 
 ### OBJETOS
 ###############################################################################################
 
-## R es un lengiaje orientado a objetos.
+## R es un lenguaje orientado a objetos.
 
-# asignacion de valores
-x<-5  # almacena 5 en x
-x=5   # almacena 5 en x
+# Asignacion de valores
+x <- 5  # Almacena 5 en x.
 
-# muestra el valor de x
+# Muestra el valor de x
 x
-
 
 ### VECTORES
 ###############################################################################################
 
-## Esta clase es numerica(numeric), caracter(character), logica(logic) y compleja(complex)
-## Se usa la funcion concatenacion c(), que combina elementos para formar un vector
+## Esta clase es numérica (numeric), carácter (character), lógica (logic) y compleja (complex).
+## Se usa la función concatenación c(), que combina elementos para formar un vector.
 
-x=c(1,2,3,4,5)  # numerico
+x <- c(1, 2, 3, 4, 5)  # Numérico.
 x
 
-z=c("A","B","C","D","E")  # caracter
+z <- c("A", "B", "C", "D", "E")  # Carácter.
 z
 
-w=c(FALSE,FALSE,TRUE,TRUE,TRUE)  # logico
+w <- c(FALSE, FALSE, TRUE, TRUE, TRUE)  # Lógico.
 w
 
-## Acceso a los elementos del vector
+## Acceso a los elementos del vector.
 
-x[1] # accede al primer elemento de x
+x[1] # Accede al primer elemento de x.
 
-z[2:4] # accede a los elementos de la posicion 2 a la 4
+z[2:4] # Accede a los elementos de la posición 2 a la 4.
 
-z[c(1,3,4)] # accede al primer, tercer y quinto elemento
+z[c(1, 3, 4)] # Accede al primer, tercer y quinto elemento.
 
-z[w] # accede a las posiciones donde w es true
+z[w] # Accede a las posiciones donde w es TRUE.
 
 
 ### OPERACIONES
 ###############################################################################################
 
-## Se realizan las operaciones usuales enre vectores suma(+), resta(-), multiplicacion(*), division(/) y 
-## potenciacion (** o ^).
-## Tambien se usan las operaciones logicas <,>,>= (mayor o igual), <= (menor o igual), == (igual), 
+## Se realizan las operaciones usuales entre vectores suma (+), resta (-), multiplicación (*), división (/) y 
+## potenciación (** o ^).
+## También se usan las operaciones lógicas <,>,>= (mayor o igual), <= (menor o igual), == (igual), 
 ## != (diferente), | (o) y & (y).
-## Se usa la funcion concatenacion c(), que combina elementos para formar un vector
+## Se usa la función concatenación c(), que combina elementos para formar un vector.
 
 x^2
 
-(1+x)**2/2-sqrt(x)
+(1 + x)**2/2 - sqrt(x)
 
-x>=4
+x >= 4
 
-x<2
+x < 2
 
-(x>=4)|(x<2)
+(x >= 4) | (x < 2)
 
-z[(x>=4)|(x<2)]
+z[(x >= 4) | (x < 2)]
 
 
 ### FUNCIONES
 ###############################################################################################
 
-## sqrt() raiz cuadrada
-## abs() valor absoluto
-## sin(), cos(), tan() trigonometricas
-## asin(), acos(), atan() trigonometricas inversas
-## sinh(), cosh(), tanh() hiperbolicas
-## asinh(), acosh(), atanh() hiperbolicas inversas
-## exp(), log()  exponencial y logartimo natural
-## log10() logaritmo base 10
+## sqrt() raíz cuadrada.
+## abs() valor absoluto.
+## sin(), cos(), tan() trigonométricas.
+## asin(), acos(), atan() trigonométricas inversas.
+## sinh(), cosh(), tanh() hiperbólicas.
+## asinh(), acosh(), atanh() hiperbólicas inversas.
+## exp(), log()  exponencial y logartimo natural.
+## log10() logaritmo base 10.
 
 
 ### MATRICES
 ###############################################################################################
 
-## Es un areglo bidimensional, donde todos los elemntos son de la misma clase. 
-## Se usara la funcion matrix() proporcionando un vector con los elementos de la matriz
-## y especificando el numero de filas o columnas de la matriz.
+## Es un arreglo bidimensional, donde todos los elemntos son de la misma clase. 
+## Se usara la función matrix() proporcionando un vector con los elementos de la matriz.
+## y especificando el número de filas o columnas de la matriz.
 
-M=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3)
-M
+M <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, ncol = 3); M
 
 ## La matriz M es llenada, por defecto, por columnas. Si se desea que el caso sea por filas, se 
-## habilita dicha opcio,
+## habilita dicha opción,
 
-M=matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=3, byrow=T)
-M
+M = matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, ncol = 3, byrow = T); M
 
 ## Accediendo a los elementos de la matriz
 
-M[,2] # accede a todos los elementos de la columna 2
+M[, 2] # Accede a todos los elementos de la columna 2.
 
-M[1:2,1:2] # accede a todos los elementos de las dos primeras filas y de las 2 primeras columnas
-
-
+M[1:2, 1:2] # Accede a todos los elementos de las dos primeras filas y de las 2 primeras columnas
 
 ### OPERACIONES CON MATRICES
 ###############################################################################################
 
-A=matrix(c(5,1,1,2),2,2)
-B=matrix(c(10,2,2,9),2,2)
+A <- matrix(c(5, 1, 1, 2), 2, 2)
+B <- matrix(c(10, 2, 2, 9), 2, 2)
 
-## adicion y sustraccion de matrices
+## Adición y sustracción de matrices.
 
-C=A+B
-D=A-B
+C <- A + B
+D <- A - B
 
-## multiplicaion de elemento a elemento de matrices
+## Multiplicación de Hadamard de matrices.
 
-E=A*b
+E <- A*b
 
-## multiplicacion usual de matrices
+## Multiplicación usual de matrices.
 
-F=A%*%B
-F
+G <- A%*%B; G
 
 ### FUNCIONES SOBRE MATRICES
 ###############################################################################################
 
-## Crear una matriz identidad 5x5
+## Crear una matriz identidad 5x5.
 
-I=diag(5)
-I
+I <- diag(5); I
 
 ## Determinante de una matriz
 
 det(A)
 
-## inversa de una matriz cuadrada
+## Inversa de una matriz cuadrada.
 
 solve(A)
